@@ -4,15 +4,11 @@ interface ButtonProps {
   size?: "sm" | "md" | "lg";
 }
 
-<<<<<<< HEAD
-export const Button = ({ children, variant = "primary", size = "md" }: ButtonProps) => {
-=======
 export const Button = ({
   children,
   variant = "primary",
   size = "md",
 }: ButtonProps) => {
->>>>>>> 5133ce810d3b5c0a4a86ba892e1c0bdff8f436bb
   const buttonStyles = {
     base: "flex justify-center items-center gap-2 text-nowrap leading-none hover:cursor-pointer transition-colors duration-200 font-medium rounded-full transition py-2.5",
     variant: {
@@ -27,11 +23,7 @@ export const Button = ({
     },
   };
 
-<<<<<<< HEAD
-  const className = `${buttonStyles.base} ${buttonStyles.variant[variant]} ${buttonStyles.size[size]}`; 
-=======
   const className = `${buttonStyles.base} ${buttonStyles.variant[variant]} ${buttonStyles.size[size]}`;
->>>>>>> 5133ce810d3b5c0a4a86ba892e1c0bdff8f436bb
 
   return <button className={className}>{children}</button>;
 };
