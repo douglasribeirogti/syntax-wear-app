@@ -1,4 +1,6 @@
 import {createFileRoute} from "@tanstack/react-router";
+import { ProductList } from "../../../components/ProductList";
+import { products } from "../../../mocks/products";
 
 export const Route = createFileRoute("/_app/products/")({
     component: RouteComponent,
@@ -6,14 +8,14 @@ export const Route = createFileRoute("/_app/products/")({
 
 function RouteComponent() {
     return (
-        <div className="container">
-            <h1 className='text-black'>OLÁ</h1>
+      <div className="container pt-44 md:pt-54 pb-10 md:px-10 text-black bg-surface mb-10">
+        <h1 className="text-center text-3xl mb-3">Lista de produtos</h1>
 
-            <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente veritatis aliquam quod voluptates possimus molestiae eaque aut architecto, sunt voluptatem ducimus odit ut veniam nam sequi officiis, repellat commodi suscipit?</p>
-            <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente veritatis aliquam quod voluptates possimus molestiae eaque aut architecto, sunt voluptatem ducimus odit ut veniam nam sequi officiis, repellat commodi suscipit?</p>
-            <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente veritatis aliquam quod voluptates possimus molestiae eaque aut architecto, sunt voluptatem ducimus odit ut veniam nam sequi officiis, repellat commodi suscipit?</p>
-            <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente veritatis aliquam quod voluptates possimus molestiae eaque aut architecto, sunt voluptatem ducimus odit ut veniam nam sequi officiis, repellat commodi suscipit?</p>
-            <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente veritatis aliquam quod voluptates possimus molestiae eaque aut architecto, sunt voluptatem ducimus odit ut veniam nam sequi officiis, repellat commodi suscipit?</p>
-        </div>
+        <h2 className="text-center mb-10 p-4">
+          Conforto especial para suas aventuras do did-a-dia
+        </h2>
+
+        <ProductList products={products} />
+      </div>
     );
 }
