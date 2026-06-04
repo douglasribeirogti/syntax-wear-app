@@ -8,7 +8,7 @@ export const Route = createFileRoute("/_app/products/")({
 
 function RouteComponent() {
     return (
-      <div className="container pt-44 md:pt-54 pb-10 md:px-10 text-black bg-surface mb-10">
+      <div className="container pt-44 md:pt-54 pb-10 md:px-10 text-black mb-10">
         <h1 className="text-center text-3xl mb-3">Lista de produtos</h1>
 
         <h2 className="text-center mb-10 p-4">
