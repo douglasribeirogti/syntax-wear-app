@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { isValidCPF } from "../Utils/cpf-validator";
+import { isValidCPF } from "../../utils/cpf-validator";
 
 export const registerUserFormSchema = z
   .object({
@@ -46,7 +46,7 @@ export const useRegisterForm = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     setError,
-    reset
+    reset,
   } = useForm<RegisterFormData>({
     resolver: zodResolver(registerUserFormSchema),
     mode: "onBlur",
@@ -54,7 +54,7 @@ export const useRegisterForm = () => {
       email: "",
       password: "",
     },
-    criteriaMode: "all",  
+    criteriaMode: "all",
   });
 
   return {
@@ -63,6 +63,6 @@ export const useRegisterForm = () => {
     errors,
     isSubmitting,
     setError,
-    reset
-  }
-}
+    reset,
+  };
+};
