@@ -8,15 +8,19 @@ export const ShoppingCart = () => {
 
   const { cart, removeFromCart, incrementInCart, decrementInCart } =
     useContext(CartContext);
-  console.log("itens no carrinho:", cart);
 
   return (
     <>
       <button
-        className="cursor-pointer"
+        className="cursor-pointer relative"
         onClick={() => setCartIsOpen(!cartIsOpen)}
       >
         <img src={IconCart} alt="Icone carrinho de compras" />
+        {cart.length > 0 && (
+          <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">
+            {cart.length}
+          </span>
+        )}
       </button>
 
       {/* Overlay */}
